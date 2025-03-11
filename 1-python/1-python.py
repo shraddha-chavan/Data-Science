@@ -565,6 +565,16 @@ n=6#including missing number
 print("Missing number:",missing_num(lst,n))
 
 
+#reverse a string without built in function
+def rev_string(s):
+    rev_s=s[::-1]
+    return rev_s
+s="My name is shraddha"
+rev_s=rev_string(s)
+print(rev_s)
+
+
+
 
 
 
