@@ -554,6 +554,16 @@ for i in range(4):
     print()    
 
 #######################
+#finding missing number 
+def missing_num(lst,n):
+    expected_num=n*(n+1)//2
+    actual_num=sum(lst)
+    missing_num=expected_num-actual_num
+    return missing_num
+lst=[1,2,4,5,6]
+n=6#including missing number
+print("Missing number:",missing_num(lst,n))
+
 
 
 
