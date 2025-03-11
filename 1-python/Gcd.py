@@ -16,3 +16,25 @@ num2=int(input("enter second no.:"))
 #output
 ans=gcd(num1,num2)
 print(f"GCD of {num1} and{num2} is:{ans}")
+
+
+#finding gcd using math function
+import math
+num1=int(input("Enter first number:"))
+num2=int(input("Enter second number:"))
+ans=math.gcd(num1,num2)
+print(f"GCD of {num1} and {num2} is :{ans} ")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
