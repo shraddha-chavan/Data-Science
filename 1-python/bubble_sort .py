@@ -37,7 +37,7 @@ def bubble_sort(lst):
     return lst
 lst=[2,4,5,6,3]
 print(bubble_sort(lst))
-print(lst[-4])
+print(lst[1])
 
 
  
