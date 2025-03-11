@@ -573,7 +573,9 @@ s="My name is shraddha"
 rev_s=rev_string(s)
 print(rev_s)
 
-
+#in one line reverse string
+rev_string=input("Enter the string:")[::-1]
+print(rev_string)
 
 
 
