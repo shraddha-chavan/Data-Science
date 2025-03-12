@@ -577,6 +577,15 @@ print(rev_s)
 rev_string=input("Enter the string:")[::-1]
 print(rev_string)
 
+#write a program to check wheather vowels are present in a sentence
+char=input("Enter a string:").lower()
+
+if any (vowel in char for vowel in"aeiou"):
+    
+    print("Vowels are present in sentence")
+else:
+    print("Vowels are not present in sentence")
+    
 
 
 
