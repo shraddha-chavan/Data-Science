@@ -32,6 +32,76 @@ def min_cost(no_banana,lot1,price1,lor2,price2):
 min_cost(no_banana,lot1,price1,lot2,price2)
     
 
+###Gary is an avid hiker. He tracks his hikes meticulously,
+ #paying close attention to small details like topography.
+#During his last hike, he took exactly n steps. 
+ #For every step he took, he noted if it was an uphill (U) 
+ #or a downhill (D) step. Gary’s hikes start and end 
+ #at sea level.
+
+#We define the following terms:
+
+#A mountain is a non-empty sequence of consecutive
+ #steps above sea level, starting with a step up 
+ #from sea level and ending with a step down to sea level.
+ #A valley is a non-empty sequence of consecutive
+ #steps below sea level, starting with a step down 
+ #f#rom sea level and ending with a step up to sea level.
+#Given Gary’s sequence of up and down steps 
+#during his last hike, find and print the number of valleys
+ #he walked through.
+
+#Gary is hiking, and he records each step as either U (uphill) or D (downhill). He always starts and ends at sea level (0 altitude).
+
+#We need to count the number of valleys he walks through.
+
+#What is a valley?
+#A valley is when:
+
+#Gary goes below sea level (altitude becomes negative).
+#He then comes back to sea level.
+#Example Walkthrough
+#Let’s say Gary takes the following 8 steps:
+#"DDUUUUDD"
+
+
+
+def count_valleys(n,path):
+    elevation=0# starting at sea level
+    valley_count=0#counter for valley
+    
+    for step in path:
+        if step=='U':#going up
+           elevation+=1
+           if elevation==0:#if we just came back to sea level, a valley ended
+             valley_count+=1
+
+        else:
+            step=='D'#going down
+            elevation-=1
+        return valley_count      
+
+
+#example usage
+n=8
+path="UDDDUDUU"
+print("Totak valley:", count_valleys (n,path))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+              
 
     
               
