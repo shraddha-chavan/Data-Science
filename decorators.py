@@ -171,4 +171,36 @@ def add(a,b):
 
 print(add(3,4))#logs the function call
 
+#Access control/ Authentication
+#check if a user is authenticated 
+#before executing a function
+
+def auth_required(func):
+    def wrapper(user):
+        if not user.get("authenticated",False):
+            #the .get("authenticated",false)method 
+            #is used to safely retreive the value of the 
+            # authenticated key from the dictionary
+            
+            print("Access Denied")
+            return
+        return func(user)
+    return wrapper
+            
+@auth_required
+def dashboard(user):
+    print(f"Welcome, {user['name']}!")
+    
+# Test cases
+user1=({"name": "Alice", "authenticated": True})  # Output: Welcome, Alice!
+user2=({"name": "Bob", "authenticated": False})   # Output: Access Denied           
+            
+dashboard(user1) #access granted       
+dashboard(user2)   #access denied  
+          
+            
+
+
+
+
 
