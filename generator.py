@@ -24,3 +24,7 @@ def range_even(end):
 for num in range_even(6):
     print(num)
 
+########instead of using for loop we can use our own generator####
+gen=range_even(6)
+next(gen)
+next(gen)
