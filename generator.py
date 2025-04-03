@@ -62,6 +62,30 @@ lst=["milk","Egg","Bread"]
 for index,item in enumerate(lst,start=1):
     print(f'{index}{item}')
 
+####use of zip function####
+name=['shraddha','sunil','chavan']
+info=[9822,4104,8093]
+for nm,inf in zip(name,info):
+    print(nm,inf)
+####use zip function with mis-matched list
+name=['shraddha','sunil','chavan','tejal']
+info=[9822,4104,8093]
+for nm,inf in zip(name,info):
+    print(nm,inf)
+###in above code it will not display tejal 
+
+
+############################
+###then for mis-matched list theree is" zip-longest"
+#zip-longest
+from itertools import zip_longest
+name=['shraddha','sunil','chavan','tejal']
+info=[9822,4104,8093]
+for nm,inf in zip_longest(name,info):
+    print(nm,inf)
+
+
+
 
 
 
