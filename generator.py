@@ -135,6 +135,16 @@ print(next(counter))
 print(next(counter))
 
 
+#cycle()
+#suppose you have repeated tasks to be done,
+# then u can use cycle()
+import itertools
+instructions=( "Eat","code","sleep")
+for instruction in itertools.cycle(instructions):
+    print(instruction)
+
+
+
 
 
 
