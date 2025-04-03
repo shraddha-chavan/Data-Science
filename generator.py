@@ -84,6 +84,12 @@ info=[9822,4104,8093]
 for nm,inf in zip_longest(name,info):
     print(nm,inf)
 
+#instead of none  fill value
+from itertools import zip_longest
+name=['shraddha','sunil','chavan','tejal']
+info=[9822,4104,8093]
+for nm,inf in zip_longest(name,info,fillvalue=0):
+    print(nm,inf)
 
 
 
