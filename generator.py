@@ -91,6 +91,69 @@ info=[9822,4104,8093]
 for nm,inf in zip_longest(name,info,fillvalue=0):
     print(nm,inf)
 
+##use of all(),if all the values are true
+# then it  will produce output
+lst=[2,3,-6,8,9]#values must be zero,+ve,-ve
+if all(lst):
+    print('all values are true')
+else:
+    print('There are null values')
+
+##############
+lst=[2,3,0,8,9]
+if all(lst):
+    print('all values are true')
+else:
+    print('There are null values')
+
+
+##use of any if any one non zero value
+lst=[0,0,0,-8,0]
+if any(lst):
+    print('It has some non-zero values')
+else:
+    print('Useless')
+#####################
+lst=[0,0,0,0,0]
+if any(lst):
+    print('It has some non-zero values')
+else:
+    print('Useless')
+
+#count()
+from itertools import count
+counter=count()
+print(next(counter))
+print(next(counter))
+print(next(counter))
+
+#now let us start from 1
+from itertools import count
+counter=count(start=1)
+print(next(counter))
+print(next(counter))
+print(next(counter))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
