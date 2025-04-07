@@ -577,3 +577,126 @@ lst = [2,4,6,8,11,10,12]
 lst = []  
 '''
 
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Apr  6 20:00:17 2025
+
+@author: Latitude 5410
+"""
+
+#repeat()
+from itertools import repeat
+for msg in repeat("Keep patience",times=3):
+    print(msg)
+    
+#combinations()
+from itertools import combinations
+players=['John','Jani','Janardhan']
+for i in combinations(players,2):
+    print(i)
+    
+#permutations()
+from itertools import permutations
+players=['John',"Jani",'Janardhan']
+for seat in permutations(players,2):
+    print(seat)
+    
+#product() 
+from itertools import product
+team_a=['Rohit','Pandya','Bumrah']
+team_b=['Virat','Manish','Sami']
+for pair in product(team_a,team_b):
+    print(pair)
+    
+#filter()
+age=[27,17,21,19]
+adults=filter(lambda age:age>=18,age)
+print([age for age in adults])
+
+#Assignment operation
+#This will only create a new variable with the same reference
+list_a=[1,2,3,4]
+list_b=list_a
+list_a[0]=-10
+print(list_a)
+print(list_b)
+
+#shallow copy (imp)
+#one level deep. modifying on level 1 does not affect the another
+#use copy.copy() or object specific copy functions/copy
+import copy
+list_a=[1,2,3,4]
+list_b=copy.copy(list_a)
+
+#not affects the other list
+list_b[0]=-10
+print(list_a)
+print(list_b)
+
+#but with nested objects modifying on level 2 or
+#deeper does affect the other
+import copy
+list_a=[[1,2,3,4],[5,6,7,8]]
+list_b=copy.copy(list_a)
+#affect the other
+list_b[0][0]=-10
+print(list_a)
+print(list_b)
+
+#Deep copy
+#full independent clones. use copy.deepcopy()
+import copy
+list_a=[[1,2,3,4],[5,6,7,8]]
+list_b=copy.deepcopy(list_a)
+#not affect the other
+list_a[0][0]=-10
+print(list_a)
+print(list_b)
+
+#shallow copy and deep copy
+#copy an objec t in python
+#copy using * operator
+old_list=[[1,2,3],[4,5,6],[7,8,'a']]
+new_list=old_list
+new_list[2][2]=9
+print('old list:',old_list)
+print("ID of old list:",id(old_list))
+print('new list:',new_list)
+print("ID of new list:",id(new_list))
+
+import copy
+lst1=[1,2,[3,4],5]
+#using shallow copy
+lst2=copy.copy(lst1)
+print(f"The id of lst1:{id(lst1)} and value is {lst1} and id of lst2:{id(lst2)} and the value is{lst2}")
+
+lst1=[1,2,[3,4],5]
+#using deep copy
+lst3=copy.deepcopy(lst1)
+print(f"The id of lst1:{id(lst1)} and value is {lst1} and id of lst3:{id(lst3)} and the value is{lst3}")
+
+#unpacking of dictionary
+friends={
+    "Dale":9850,
+    "Male":6032
+    }
+contacts={
+    "dada":8560,
+    "mama":5286
+    }
+contacts.update(friends)
+print(contacts)
+
+#pipe operator
+friends={"Satish":99021,
+         "Ram":97603}
+sham={"sham":85305}
+all_friends=friends|sham
+print(all_friends)
+
+#local and global variable
+num=0
+def change():
+    num=1
+change()
+print(num)
