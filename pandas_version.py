@@ -99,4 +99,45 @@ df=pd.DataFrame(technologies,index=row_labels)
 #Assign new header by setting new columns names
 df.column=['A','B','C','D']
 df
+#Drop dataframe rows and columns
+df = pd.DataFrame(technologies,index=row_labels)
+
+#drops rows  by labels
+df1 = df.drop(['r1','r2'])
+df1
+df=pd.DataFrame(technologies,index=row_labels)
+
+#delete rows by position
+df1=df.drop(df.index[[1,3]])
+
+#delete rows by index range
+df1=df.drop(df.index[2:])
+df1
+
+#when you have given default indexs for rows
+df=pd.DataFrame(technologies)
+df1=df.drop(0)
+df1
+df=pd.DataFrame(technologies)
+df1=df.drop([0,3])#it willl delete row0 n row3
+df1=df.drop(range(0,2))#it will delete 0 n 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
