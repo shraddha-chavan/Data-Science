@@ -134,6 +134,33 @@ df2=df.iloc[-1:]#select last row
 df2=df.iloc[-3]#select last 3 rows
 df2=df.iloc[::2]#select alternate rows
 
+#select rows by index labels
+df2=df.loc['r2']#select row by index label
+df2=df.loc[['r2','r3','r6']]#select row by index label
+df2=df.loc['r1':'r5']#select row by label index range
+df2=df.loc['r1':'r5':2]#select alternative row by index 
+
+
+#pandas select columns by name of index
+#by using df[] notation
+df2=df['Courses']
+#select multiple columns
+df2=df.loc[:,['Courses','Fee','Duration']]
+#select columns between 2 columns
+df2=df.loc[:,'Fee':'Discount']
+#select column by range
+df2=df.loc[:,'Duration':]
+#select every alternate column
+df2=df.loc[:,::2]
+
+
+
+
+
+
+
+
+
 
 
 
