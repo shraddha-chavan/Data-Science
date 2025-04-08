@@ -123,6 +123,19 @@ df1=df.drop([0,3])#it willl delete row0 n row3
 df1=df.drop(range(0,2))#it will delete 0 n 1
 
 
+##example
+#select rows by integer index
+df2=df.iloc[2]#select row by index
+df2=df.iloc[[2,3,6]]#select row by index list
+df2=df.iloc[1:5]#select row by integer index range
+df2=df.iloc[:1]#select 1st row
+df2=df.iloc[:3]#select 1st 3 rows
+df2=df.iloc[-1:]#select last row
+df2=df.iloc[-3]#select last 3 rows
+df2=df.iloc[::2]#select alternate rows
+
+
+
 
 
 
