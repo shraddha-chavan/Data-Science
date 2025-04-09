@@ -153,6 +153,36 @@ df2=df.loc[:,'Duration':]
 #select every alternate column
 df2=df.loc[:,::2]
 
+#delete rows with Nan,None,Null values
+import pandas as pd
+import numpy as np
+technologies={'Courses':["Spark","PySpark","Hadoop","Python"],
+              'Fee':[20000,25000,26000,22000],
+              'Duration':['','40days',np.nan,None],
+              'Discount':[1000,2300,1500,1200]
+              }
+
+indexes=['r1','r2','r3','r4']
+df=pd.DataFrame(technologies,index=indexes)
+print(df)
+df=pd.DataFrame(technologies,index=indexes)
+df2=df.dropna()
+print(df2)
+
+#How to clean empty string
+#first drop rows with Nan (np.nan and None
+df_clean=df.dropna(subset=['Duration'])
+
+#Then drop rows with empty strings
+df_clean=df_clean[df_clean['Duration'] !='']
+print(df_clean)
+
+
+
+
+
+
+
 
 
 
