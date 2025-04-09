@@ -261,6 +261,9 @@ df=df.transform(add_2)
 print(df)
 
 
+#using pandas.dataframe.map() to single column
+df['A']=df['A'].map(lambda A:A/2)
+print(df)
 
 
 
