@@ -178,6 +178,79 @@ df_clean=df_clean[df_clean['Duration'] !='']
 print(df_clean)
 
 
+#Change all columns to same type in pandas
+#df.astype(str)converts all columns of pandas DataFrame
+df=df.astype(str)
+print(df.dtypes)
+
+#Changing type for one or multiple columns in pandas
+#changing type for one or multipple columns
+df=df.astype({"Fee":int,"Discount":float})
+print(df.dtypes)
+
+##convert data types for all columns in a list
+df=pd.DataFrame(technologies)
+cols=['Fee','Discount']
+df[cols]=df[cols].astype('float')
+df.dtypes
+
+#By using a loop
+for col in ['Fee','Discount']:
+    df[col]=df[col].astype('float')
+
+
+#Raise or ignore error when convert colun type fail
+df=df.astype({"Courses":int},errors='ignore')
+df.dtypes
+#generate error
+df=df.astype({"Courses":int},errors='raise')
+
+#convert feed column to numeric type
+df['Fee']=pd.to_numeric(df['Fee'])
+print(df.dtypes)
+
+#convert fee and discount to numeric type
+df=pd.DataFrame(technologies)
+df.dtypes
+df[['Fee','Discount']]=df[['Fee','Discount']].apply(pd.to_numeric)
+print(df.dtypes)
+
+#quick example of get the number of rows in dataframe
+rows_count=len(df.index)
+rows_count
+rows_count=len(df.axes[0])
+rows_count
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
