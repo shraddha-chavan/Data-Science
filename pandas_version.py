@@ -221,6 +221,56 @@ rows_count
 rows_count=len(df.axes[0])
 rows_count
 
+#using dataframe .apply()to apply function add column
+import pandas as pd
+import numpy as np
+data=[(3,5,7),(2,4,6),(5,8,9)]
+df=pd.DataFrame(data,columns=['A','B','C'])
+print(df)
+
+def add_3(x):
+    return x+3
+def2=df.apply(add_3)
+df2
+
+
+
+##using apply function single column
+def add_4(x):
+    return x+4
+df["B"]=df["B"].apply(add_4)
+df["B"]
+df=pd.DataFrame(data,columns=['A','B','C'])
+#apply to multiple columns
+df[['A','B']]=df[['A','B']].apply(add_3)
+df=pd.DataFrame(data,columns=['A','B','C'])
+#apply a lambda function to each colum
+df2=df.apply(lambda x:x+10)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
