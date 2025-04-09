@@ -248,6 +248,21 @@ df=pd.DataFrame(data,columns=['A','B','C'])
 df2=df.apply(lambda x:x+10)
 
 
+#apply lambda function to single column
+df["A"]=df["A"].apply(lambda x:x-2)
+print(df)
+
+#using pandas.dataframe.transform()
+#to apply function  column
+#using dataframe.transform()
+def add_2(x):
+    return x+2
+df=df.transform(add_2)
+print(df)
+
+
+
+
 
 
 
