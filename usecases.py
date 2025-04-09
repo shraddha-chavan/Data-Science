@@ -700,3 +700,191 @@ def change():
     num=1
 change()
 print(num)
+
+
+
+'''Write a Python function named collect_employee_details() that collects details of a 
+specified number of employees. The function should: 
+1. Prompt the user to enter the number of employees (residents). 
+2. For each employee, collect: 
+o Name 
+o Age 
+o Designation 
+o Band (should be one of 'A', 'B', 'C', or 'D'; case-insensitive input but stored in 
+uppercase) 
+3. Validate the following: 
+o Number of residents must be greater than 0. 
+o Age must be between 21 and 58 (both inclusive). 
+o Band must be one of 'A', 'B', 'C', or 'D'. 
+If any validation fails, print "Invalid" and terminate the function immediately. 
+Test Case 
+No. 
+TC1 
+TC2 
+TC3 
+TC4 
+TC5 
+TC6 
+TC7 
+TC8 
+TC9 
+Input 
+Number of residents: 0 
+Number of residents: -2 
+Number of residents: 1, Age: 20 
+Number of residents: 1, Age: 59 
+Number of residents: 1, Band: E 
+Number of residents: 1, Age: 30, Band: b 
+Number of residents: 2, First entry valid, Second 
+entry Age: 60 
+Number of residents: 2, First entry valid, Second 
+Band: F 
+Number of residents: 2, All inputs valid (Name, 
+Age, Designation, Band) 
+Expected Output 
+Invalid 
+Invalid 
+Invalid 
+Invalid 
+Invalid 
+(Valid input, continue) 
+Invalid 
+Invalid 
+Function completes without 
+printing Invalid '''
+
+
+def num_employees():
+    try:
+        # Print for number of employees
+        num_employees = int(input("Enter the number of employees: "))
+        
+        if num_employees <= 0:
+            print("Invalid")
+            return
+        
+        employees = []
+        
+        for _ in range(num_employees):
+            # Collect details of the employee
+            name = input("Enter Name: ")
+            age = int(input("Enter Age: "))
+            designation = input("Enter Designation: ")
+            band = input("Enter Band (A, B, C, D): ").upper()
+            
+            # Validate inputs
+            if age < 21 or age > 58:
+                print("Invalid")
+                return
+            
+            if band not in ['A', 'B', 'C', 'D']:
+                print("Invalid")
+                return
+            
+            employees.append({
+                "Name": name,
+                "Age": age,
+                "Designation": designation,
+                "Band": band
+            })
+        
+        print("Employee details collected successfully.")
+        print(employees)
+    
+    except ValueError:
+        print("Invalid input.")
+
+#test cases
+print(
+
+
+
+
+
+
+
+'''Write a Python function longest_negative_sum(input1, input2) that takes two 
+parameters: 
+ input1: A list of integers. 
+ input2: (length of list) 
+Your task is to identify all contiguous negative number sequences in the list input1, and: 
+1. Find the longest such sequence(s) (i.e., the ones with the most consecutive negative 
+numbers). 
+2. If multiple sequences share the same maximum length, include all of them. 
+3. Calculate and return the sum of the individual sums of these longest sequences. 
+4. If there are no negative numbers, return -1. 
+Test 
+Case 
+No. 
+TC1 
+TC2 
+TC3 
+TC4 
+TC5 
+TC6 
+TC7 
+TC8 
+TC9 
+Input1 
+[1, 2, 3, 4] 
+[-1, -2, -3, 
+4, -1, -2] 
+[4, -1, -2, 
+3, -4, 5] 
+[4, -1, -2, 0, -3, -4] 
+[-5] 
+[-1, -2, 0, 
+1, -2, 0, -1, -2] 
+[] 
+[-1, -2, -3, 
+4, -5] 
+[1, -1, -2, 3, -3, -4, 5, -5, -6] 
+Expected 
+Output -1 -12 -10 -10 -5 -9 -1 -15 -21 
+Explanation 
+No negative numbers 
+Two negative sequences of equal max length 3: [
+1, -2, -3] = -6 and [-1, -2] = -3 → Only first 
+has max length = 3, sum = -6 
+One sequence of length 4: [-1, -2, -3, -4] 
+Two sequences of length 2 → [-1, -2] and [-3, -4], sum = -3 + -7 = -10 
+Single negative element 
+Three sequences of equal length 2 → sums: -3, -3, 
+3 → Total = -9 
+Empty list 
+One long negative sequence 
+Three sequences of equal max length 2 → [-1, -2], 
+[-3, -4], [-5, -6] → Sum = -3 -7 -11 = -21 '''
+
+
+def longest_negative_sum(input1, input2):
+    if len(input1) != input2:
+        return -1
+
+    sequences = []
+    current = []
+    for num in input1:
+        if num < 0:
+            current.append(num)
+        else:
+            if current:
+                sequences.append(current)
+                current = [] 
+    if current:
+        sequences.append(current)
+    
+    if not sequences:
+        return -1
+
+    max_len = max(len(seq) for seq in sequences)
+    return sum(sum(seq) for seq in sequences if len(seq) == max_len)
+
+
+#test cases 
+print(longest_negative_sum([1, 2, 3, 4], 4))                   
+print(longest_negative_sum([-1, -2, -3, 4, -1, -2], 6))          
+print(longest_negative_sum([4, -1, -2, 3, -4, 5], 6))
+print(longest_negative_sum([4, -1, -2, 0, -3, -4], 6))           
+print(longest_negative_sum([-5], 1))
+print(longest_negative_sum([], 0))                              
+print(longest_negative_sum([1, -1, -2, 3, -3, -4, 5, -5, -6], 9))  
