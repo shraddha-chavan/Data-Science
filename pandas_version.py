@@ -388,6 +388,9 @@ r6         NaN      NaN      NaN          Java      2300
 r3      Python  22000.0   35days        Python      1200
 r5         NaN      NaN      NaN            Go      2000'''
 
+#using pandas.merge()
+df3=pd.merge(df1,df2)
+
 
 
 
