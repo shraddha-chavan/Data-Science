@@ -265,6 +265,85 @@ print(df)
 df['A']=df['A'].map(lambda A:A/2)
 print(df)
 
+import pandas as pd
+import numpy as np
+data=[(3,5,7),(2,4,6),(5,8,9)]
+df=pd.DataFrame(data,columns=['A','B','C'])
+print(df)
+#using numpy function on single column
+#using dataframe.apply()&[]operator
+df['A']=df['A'].apply(np.square)
+print(df)
+'''df['C']=df['C'].apply(np.square)
+print(df)'''
+
+
+#Pandas groupby()with example
+import pandas as pd
+technologies=({'Courses':["shraddha","samu","teju","rutu","goti","goti","kittu","laduu","NA"],
+               'Fee':[200,210,220,230,240,250,260,270,280],
+               'Duration':['1days','2days','3days','4days','5days','6days','7days','8days','9days'],
+               'Discount':[10,20,30,40,50,60,70,80,90]})
+df=pd.DataFrame(technologies)
+print(df)
+
+#use groupby()  to compute the sum
+df2=df.groupby(['Courses']).sum()
+print(df2)
+
+#use groupby()  to compute the sum of multiple
+df2=df.groupby(['Courses','Duration']).sum()
+print(df2)
+
+
+
+#Add index to grouped data
+#add row index to the group by result:
+df2=df.groupby(['Courses','Duration']).sum
+
+
+#########################################################
+    
+
+#get the list of all column names from header
+column_headers=list(df.columns.values)
+print("The column Header:",column_headers)
+
+#using list(df) to get column headers as a list
+column_headers=list(df.columns)
+column_headers
+
+#using list(df)to get the list of all column names
+column_headers=list(df)
+column_headers
+
+#pandas shuffle dataframe rows
+import pandas as pd
+technologies=({'Courses':["shraddha","samu","teju","rutu","goti","goti","kittu","laduu","NA"],
+               'Fee':[200,210,220,230,240,250,260,270,280],
+               'Duration':['1days','2days','3days','4days','5days','6days','7days','8days','9days'],
+               'Discount':[10,20,30,40,50,60,70,80,90]})
+df=pd.DataFrame(technologies)
+print(df)
+
+#shuffle the dataframe row and return all rows
+df1=df.sample(frac=1)
+print(df1)
+
+#create a new index starting from zero
+df1=df.sample(frac=1).reset_index()
+print(df1)
+
+
+#drop shuffle index
+df1=df.sample(frac=1).reset_index(drop=True)
+print(df1)
+
+
+
+
+
+
 
 
 
