@@ -339,7 +339,7 @@ print(df1)
 df1=df.sample(frac=1).reset_index(drop=True)
 print(df1)
 
-####################################################################
+#########################################################################
 import pandas as pd
 technologies={'Courses':["Spark","PySpark","Python","pandas"],
               'Fee':[20000,25000,22000,30000],
@@ -354,6 +354,52 @@ technologies2={
 
 index_labels2=['r1','r6','r3','r5']
 df2=pd.DataFrame(technologies2,index=index_labels2)
+
+#pandas join
+df3=df1.join(df2,lsuffix="left",rsuffix="_right")
+print(df3)
+
+'''output: 
+    Coursesleft    Fee Duration Courses_right  Discount
+ r1       Spark  20000   30days         Spark    2000.0
+ r2     PySpark  25000   40days           NaN       NaN
+ r3      Python  22000   35days        Python    1200.0
+ r4      pandas  30000   50days           NaN       NaN '''
+ 
+ 
+
+# pandas inner join dataframe 
+df3=df1.join(df2,lsuffix="left",rsuffix="_right",how='inner')
+print(df3)
+'''output: 
+    Coursesleft    Fee Duration Courses_right  Discount
+ r1       Spark  20000   30days         Spark      2000
+ r3      Python  22000   35days        Python      1200'''
+ 
+ 
+ 
+# pandas right join dataframe 
+df3=df1.join(df2,lsuffix="left",rsuffix="_right",how='right')
+print(df3)
+'''output: 
+   Coursesleft      Fee Duration Courses_right  Discount
+r1       Spark  20000.0   30days         Spark      2000
+r6         NaN      NaN      NaN          Java      2300
+r3      Python  22000.0   35days        Python      1200
+r5         NaN      NaN      NaN            Go      2000'''
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
