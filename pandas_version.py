@@ -391,6 +391,22 @@ r5         NaN      NaN      NaN            Go      2000'''
 #using pandas.merge()
 df3=pd.merge(df1,df2)
 
+#################################################################
+# concatenate multiple dataframes 
+import pandas as pd
+df=pd.DataFrame({'Courses':["Spark","PySpark","Python","pandas"],
+              'Fee':[20000,25000,22000,24000]} )             
+
+df1=pd.DataFrame({'Courses':["Unix","Hadoop","Hypersion","Java"],
+              'Fee':[25000,25200,24500,24900]} )             
+
+df2=pd.DataFrame({'Duration':['30days','40days','35days','60days','55days'],
+              'Discount':[1000,2300,2500,2000,3000]} )             
+
+
+df3=pd.concat([df,df1,df2])
+print(df3)
+
 
 
 
