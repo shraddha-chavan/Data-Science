@@ -86,6 +86,30 @@ new_arr[2,1:3]
 new_arr[[0,2,0,2],[0,0,2,2]]#first give row numbers then give column
 
 
+#create 9 random number from 1,9
+arr=np.random.randint(1,100,9)
+arr
+#find square (arr)
+np.sqrt(arr)
+#find sin of array
+np.sin(arr)
+#find exponential
+np.exp(arr)
+#find log
+np.log(arr)
+#find meand
+np.mean(arr)
+#find median
+np.median(arr)
+##########################################
+
+
+
+
+
+
+
+
 
 
 
