@@ -173,6 +173,59 @@ B=np.array([[1,1],[1,1],[-1,1]])
 B
 
 
+#we use the numpy attribute T to calculate
+# the transform matrix
+C=np.array([[1,1],[2,2],[3,3]])
+C
+#get transposed of C
+C.T
+###############################################
+#write a numpy program to get version
+import numpy as np
+print(np.__version__)
+print(np.show_config())
+
+#write a numpy program to test element-wise for 
+#complex numbers,real numbers in a given 
+#array. also test if a given no. is of a sclar type
+#or not
+import numpy as np
+a=np.array([1+1j,1+0j,4.5,3,2,2j])
+print("original array")
+print(a)
+print("checking for complex numbers:")
+print(np.iscomplex(a))
+print("checking for real numbers:")
+print(np.isreal(a))
+print("checking for scalar type")
+print(np.isscalar(3))
+print(np.isscalar([3.1]))
+
+########################################
+#write a numpy program to compute
+#the multiplication of 2 matrixes
+import numpy as np
+p=[[1,0],[0,1]]
+p=np.array(p)
+q=[[1,2],[3,4]]
+q=np.array(q)
+res=np.dot(p,q)
+res
+
+#########################################
+#outer product is hadamard product
+res=np.outer(p,q)
+res
+
+
+
+
+
+
+
+
+
+
 
 
 
