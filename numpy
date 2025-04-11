@@ -259,6 +259,34 @@ print("Determinant of the said 2-D array:")
 print(np.linalg.det(a))
 
 
+######################################################
+#write a code that the eigenvalues and right eigenvectors
+# of the given square
+import numpy as np
+m=np.mat("3 -2;1 0")
+print("Original matrix:")
+print("a\n",m)
+w,v=np.linalg.eig(m)
+print("Eigenvector of the said matrix",w)
+print("Eigenvector of the said matrix",v)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
