@@ -270,6 +270,16 @@ w,v=np.linalg.eig(m)
 print("Eigenvector of the said matrix",w)
 print("Eigenvector of the said matrix",v)
 
+########################################
+#write a numpy code to compute the inverse 
+#of the given 
+import numpy as np
+n=np.array([[1,2],[3,4]])
+print("Original matrix:")
+print(m)
+result=np.linalg.inv(m)
+print("Inverse of the said matrix:")
+print(result)
 
 
 
