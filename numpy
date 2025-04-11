@@ -103,6 +103,31 @@ np.mean(arr)
 np.median(arr)
 ##########################################
 
+#find that in how many percentile number exists
+#i.e:Q1,Q2,Q3 == 25%,50%,75%
+arr1=np.array([10,20,30,40,50,60,70])
+arr1
+arr1.mean()
+np.percentile(arr1,25)
+np.percentile(arr1,50)
+np.percentile(arr1,75)
+ 
+#create a 2d numpy array
+import numpy as np
+import matplotlib.pyplot as plt
+#consider the list a, the list contains three 
+#nested 
+#create a list
+a=[[11,12,13],[21,22,23],[31,32,33]]                                               
+a
+#convert list to numpy array
+#every element is the same type
+A=np.array(a)
+A
+'''Out[34]: 
+array([[11, 12, 13],
+       [21, 22, 23],
+       [31, 32, 33]])'''
 
 
 
