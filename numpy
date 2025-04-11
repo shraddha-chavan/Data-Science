@@ -128,6 +128,10 @@ A
 array([[11, 12, 13],
        [21, 22, 23],
        [31, 32, 33]])'''
+#access the element second
+# row and third column
+A[1,2]
+
 
 
 
