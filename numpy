@@ -217,6 +217,49 @@ res
 res=np.outer(p,q)
 res
 
+###############################
+#hadamard product
+import numpy as np
+a=np.array([[1,2],[3,4]])
+b=np.array([[5,6],[ 7,8]])
+hadamard=a*b
+print("hadamard product:\n",hadamard)
+###################################
+#usually works with 1D vectors
+import numpy as np
+x=np.array([1,2])
+y=np.array([3,4,5])
+outer=np.outer(x,y)
+print("Outer Product:\n",outer)
+########################################
+#write numpy program to compute the cross product
+import numpy as np
+p=[[1,0],[0,1]]
+p=np.array(p)
+q=[[1,2],[3,4]]
+q=np.array(q)
+print("original matrix:")
+print(p)
+print(q)
+result1=np.cross(p,q)
+result2=np.cross(q,p)
+print("cross product of the said two vectors(p,q)")
+print(result1)
+print("cross product of the said two vectors(q,p)")
+print(result2)
+
+##################################################
+#write a numpy program to compute the determinant
+import numpy as np
+from numpy import linalg as LA
+a=np.array([[1,0],[1,2]])
+print("Original 2-d array")
+print(a)
+print("Determinant of the said 2-D array:")
+print(np.linalg.det(a))
+
+
+
 
 
 
