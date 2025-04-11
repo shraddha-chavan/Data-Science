@@ -132,6 +132,46 @@ array([[11, 12, 13],
 # row and third column
 A[1,2]
 
+#access the element first
+# row and first column
+A[0,0]
+#access the element first
+# row and first and second column
+A[0][0:2]
+#access the element first and second
+# row and third column
+A[0:2,2]
+
+
+#Basic operation
+#create a numpy array x
+x=np.array([[1,0],[0,1]])
+x
+##create a numpy array y
+y=np.array([[2,1],[1,2]])
+y
+#add x and y
+Z=x+y
+Z
+#multiply a array by a scalar 
+#create a numpy array y
+y=np.array([[2,1],[1,2]])
+y
+#multiply y with 2
+#scalar mul
+Z=2*y
+Z
+#multiply x with y
+Z=x*y
+Z
+#with the numpy arrays A and B as follows:
+#create a matrix A
+A=np.array([[0,1,2],[1,0,1]])
+A
+#create a matrix B
+B=np.array([[1,1],[1,1],[-1,1]])
+B
+
 
 
 
