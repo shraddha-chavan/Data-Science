@@ -42,7 +42,11 @@ print(uppercased)
 # Output: ['APPLE', 'BANANA', 'CHERRY']
 
 
-
+#transforming image pixel
+pixels = [100, 150, 200, 250]
+adjusted = [min(255, pixel + 50) for pixel in pixels]  # Ensure max pixel value is 255
+print(adjusted)
+# Output: [150, 200, 250, 255]
 
 
 
