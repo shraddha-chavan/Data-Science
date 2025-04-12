@@ -35,7 +35,11 @@ evens = [x for x in range(10) if x % 2 == 0]
 print(evens)
 # Output: [0, 2, 4, 6, 8]
 
-
+#uppercase letters
+words = ["apple", "banana", "cherry"]
+uppercased = [word.upper() for word in words]
+print(uppercased)
+# Output: ['APPLE', 'BANANA', 'CHERRY']
 
 
 
