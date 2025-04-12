@@ -25,7 +25,10 @@ print(set_one)
 dict={x:x*x for x in range(3)}
 print(dict)
 
-
+#sqaure of a number:
+squares = [x**2 for x in range(5)]
+print(squares)
+# Output: [0, 1, 4, 9, 16]
 
 
 
