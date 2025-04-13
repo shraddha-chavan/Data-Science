@@ -408,6 +408,11 @@ df3=pd.concat([df,df1,df2])
 print(df3)
 
 
+#read the data
+import pandas as pd
+
+df = pd.read_csv("sales_data.csv")
+print(df.head())
 
 
 
