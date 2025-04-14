@@ -302,7 +302,50 @@ average = np.mean(a)
 standard_deviation = np.std(a)
 
 
-
+#write a numpy program to generate five random number
+import numpy as np
+x=np.random.normal(size=5)
+x
+#write numpy program to generate six number
+y=np.random.randint(low=10,high=30,size=6)
+y
+############################################
+#write a numpy program to create 
+import numpy as np
+x=np.random.random((3,3,3))
+x
+################################
+#write a numpy program to create a 5 by 5 array
+#and find the minimum and maximum values.
+import numpy as np
+x=np.random.random((5,5))
+print('original matrix')
+x
+xmin ,xmax=x.min(), x.max()
+print("minimum and maximum values:")
+print(xmin,xmax)
+###########################################
+#write a numpy program to get the minimum and 
+#maximum values of a given array along the second axis
+import numpy as np
+x=np.arange(4).reshape((2,2))
+print('\n original array:')
+x
+print("\n maximum values along the second axis:")
+print(np.amax(x,1))
+#this finds the max value along axis 1
+#i.e along rows
+#each row is:
+    #row 0-[0,1]-max=1
+    #row 1-[2,3]-max=3
+print('minimum values along the second axis:')
+print(np.amin(x,1))
+#this finds the minimum value along axis 1
+#each row is:
+    #row 0-[0,1]-min=0
+    #row 1-[2,3]-min=2
+    
+##############################################
 
 
 
