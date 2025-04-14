@@ -282,6 +282,24 @@ print("Inverse of the said matrix:")
 print(result)
 
 
+####################################
+#array operations:
+a = np.array([1, 2, 3])
+b = np.array([4, 5, 6])
+
+# Element-wise addition
+add = a + b
+
+# Element-wise multiplication
+mul = a * b
+
+# Dot product
+dot = np.dot(a, b)
+
+# Sum, mean, std
+total = np.sum(a)
+average = np.mean(a)
+standard_deviation = np.std(a)
 
 
 
