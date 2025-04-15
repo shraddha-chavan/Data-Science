@@ -79,6 +79,43 @@ sns.countplot(data=tips[tips.time=='Lunch'],x='day')
 
 
 
+'''
+1. **Dinner Insights**:
+   - Typically, the number of customers is higher
+   during dinner compared to lunch.
+   - Certain days, like Friday or Saturday, might show 
+   a peak in counts, indicating busier evenings.
+
+2. **Lunch Insights**:
+   - Lunch counts are generally lower than dinner.
+   - Weekdays like Thursday or Friday might have more activity,
+   possibly due to workday lunch breaks.
+   
+
+'''
+fg=sns.FacetGrid(tips,row='smoker',col='time')
+fg.map(sns.histplot,'total_bill')
+'''this is a facet grid histrograms showing the
+ distribution of total bills acrosss different 
+ smoking statuses and time of day (lunch vs dinner)
+ top-left:smokers during lunch
+ top=right:smokes during dinner
+ bottom-left:non-smokers during lunch
+ bottom-right:non-smokers during dinner
+ smokers vs non-smokers
+ 
+
+
+
+'''
+
+
+
+
+
+
+
+
 
 
 
