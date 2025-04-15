@@ -66,6 +66,17 @@ sns.pairplot(tips,hue='day')
 sns.heatmap(tips.corr(numeric_only=True),annot=True)#shows correlations
 #ranges from -1 to +1
 #understand correlation coefficient
+####################################################################################
+#boxplot
+sns.boxplot(tips.total_bill)#there are outliers in total_bill
+sns.boxplot(tips.tip)
+sns.countplot(tips.day)
+sns.countplot(tips.sex)
+tips.sex.value_counts().plot(kind='pie')
+tips.sex.value_counts().plot(kind='bar')
+sns.countplot(data=tips[tips.time=='Dinner'],x='day')
+sns.countplot(data=tips[tips.time=='Lunch'],x='day')
+
 
 
 
