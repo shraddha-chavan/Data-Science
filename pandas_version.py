@@ -415,6 +415,81 @@ df = pd.read_csv("sales_data.csv")
 print(df.head())
 
 
+#2. Create DataFrame and display info
+
+import pandas as pd
+data=({'Name':['Alice','Bob','Charlie','David','Eva'],
+       'Age':[25,30,35,45,28],
+       'Depaetment':['HR','IT','Finance','IT','HR'],
+       'Joining_year':[2018,2016,2015,2019,2020]})
+
+df=pd.DataFrame(data)#creating a dataframe
+print(df.head(2)) #the first 2 rows
+
+'''   output:    Name  Age Depaetment  Joining_year
+             0  Alice   25         HR          2018
+             1    Bob   30         IT          2016'''
+
+print(df.columns.tolist())#the columns names
+
+'''output:['Name', 'Age', 'Depaetment', 'Joining_year']'''
+
+print(df.dtypes)#data type of each column
+
+'''output:Name            object
+          Age              int64
+         Depaetment      object
+         Joining_year     int64
+         dtype: object'''
+
+print(df.describe())#summary statistics for numeric columns
+
+'''output:                        Age      Joining_year
+                       count   5.000000      5.000000
+                       mean   32.600000   2017.600000
+                       std     7.829432      2.073644
+                       min    25.000000   2015.000000
+                       25%    28.000000   2016.000000
+                       50%    30.000000   2018.000000
+                       75%    35.000000   2019.000000
+                       max    45.000000   2020.000000'''
+
+
+
+############################################################################################
+#3. Extend the DataFrame
+
+import pandas as pd
+
+#Create the data
+data = ({
+    'Name': ['Alice', 'Bob', 'Charlie', 'David', 'Eva'],
+    'Age': [25, 30, 35, 45, 28],
+    'Department': ['HR', 'IT', 'Finance', 'IT', 'HR'],
+    'Joining_Year': [2018, 2016, 2015, 2019, 2020]
+})
+
+df = pd.DataFrame(data)
+# Add Salary
+df['Salary'] = [50000, 60000, 70000, 65000, 48000]
+
+# Add Experience
+df['Experience'] = 2025 - df['Joining_Year']
+
+#  Add Seniority
+seniority = []
+
+for exp in df['Experience']:
+    if exp < 5:
+        seniority.append('Junior')
+    elif exp < 8:
+        seniority.append('Mid')
+    else:
+        seniority.append('Senior')
+
+df['Seniority'] = seniority
+print(df)
+
 
 
 
