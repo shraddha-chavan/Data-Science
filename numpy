@@ -359,6 +359,15 @@ q = np.array([[4, 2], [1, 3]])
 result = np.dot(p, q)
 print("Result:",result)
 ###################################################################################################
+#1. NumPy element-wise comparison of two arrays
+
+import numpy as np
+a=np.array([5,10,15])
+b=np.array([3,10,20])
+print("greater:",a>b)
+print("greater or equal:",a>=b)
+print("less",a<b)
+print("less or equal:",a<=b)
 
 
 
