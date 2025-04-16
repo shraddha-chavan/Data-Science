@@ -347,6 +347,19 @@ print(np.amin(x,1))
     
 ##############################################
 
+#4. Matrix multiplication using NumPy
+
+import numpy as np
+
+# Matrices
+p = np.array([[1, 0], [0, 1]])
+q = np.array([[4, 2], [1, 3]])
+
+# Multiply
+result = np.dot(p, q)
+print("Result:",result)
+###################################################################################################
+
 
 
 
