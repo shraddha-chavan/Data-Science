@@ -140,6 +140,40 @@ plt.show()
 
 #######################################################################################
 
+#usecases:example
+import pandas as pd
+df=pd.read_csv("C:/2-python_ds/Salary_Data.csv")
+df.dtypes
+df.columns
+df.columns.values
+df.index
+df['Price']
+df[['Price','Rooms']]
+df2=df[6:]
+df.describe()
+df2=df.rename({'Years of Experience':'yoe'},axis=1)
+df2
+df['Price']=df['Price']-1000
+df.shape
+##
+import matplotlib.pyplot as plt
+import seaborn as sns
+#1)
+sns.displot(df.age,kde=True)
+sns.displot(df.Gender,kde=False)
+#2)
+sns.jointplot(x=df2.Salary,y=df2.yoe,kind='hex') 
+#3)
+sns.pairplot(df2,kind='yoe')
+#4)
+sns.heatmap(df2.corr(numeric_only=True),annot=True)
+#5)
+sns.boxplot(df2.Age)
+sns.boxplot(df2.Gender)
+sns.countplot(df2.Salary)
+sns.countplot(df2.Gender)
+
+
 
 
 
