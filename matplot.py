@@ -410,6 +410,32 @@ plt.title('Display marker')
 plt.show()
 #######################################################################
 
+#Write a python code to plot several lines
+#with different format styles in one command using arrays
+import numpy as np
+import matplotlib.pyplot as plt
+
+#sampled time at 200ms intervals
+t=np.arange(0.,5.,0.2)
+
+#green dashes,blue sqaures and red triangles
+plt.plot(t,t,'g--',t,t**2,'bs',t,t**3,'r^')
+'''x=t,y=t
+'g--'=green (g)dashed line(--)
+plot a diagonal dashed green line (y=x)
+
+t,t**2,'bs'
+x=t,y=t**2(sqaures)
+'bs'=blue(b)sqaures (s) as markers
+plots t sqaure as blue sqaure
+
+t,t**3,'r^'
+x=t,y=t**3(cubes)
+'r^'=red(r)triangle-up markers(^)
+plots t cube as a red triangles
+'''
+plt.show()
+
 
 
 
