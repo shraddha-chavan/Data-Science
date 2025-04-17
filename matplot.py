@@ -388,6 +388,36 @@ plt.show()
 plt.legend()
 ########################################################################
 
+#write a python code to plot 2 or more lines and set the line marker
+import matplotlib.pyplot as plt
+#x axis values
+x=[1,4,5,6,7]
+#y axis values
+y=[2,6,3,6,3]
+#plotting the points
+plt.plot(x,y,color='red',linestyle='dashdot',linewidth=3,marker='o',markerfacecolor='blue',markersize=12)
+#set the y-limits of the current axes
+plt.ylim(1,8)
+#set the x-limits of the current axes
+plt.xlim(1,8)
+#naming the x axis
+plt.xlabel('x-axis')
+#naming the y axis
+plt.ylabel('y-axis')
+#giving title to my graph
+plt.title('Display marker')
+#function to show plot
+plt.show()
+#######################################################################
+
+
+
+
+
+
+
+
+
 
 
 
