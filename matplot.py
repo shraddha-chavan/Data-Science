@@ -435,8 +435,17 @@ x=t,y=t**3(cubes)
 plots t cube as a red triangles
 '''
 plt.show()
+#####################################################################################################
 
-
+#use of plt.xticks
+import matplotlib.pyplot as plt
+x_pos=[0,1,2,3]
+x=['Apple','Banana','Mango','Orange']
+plt.bar(x_pos,[10,15,7,12])
+plt.xticks(x_pos,x)
+plt.ylabel('Quantity')
+plt.title('Fruit Stock')
+plt.show()
 
 
 
