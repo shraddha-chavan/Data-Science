@@ -472,6 +472,38 @@ plt.show()
 #########################################################################
 
 
+#write python code to display horizontal bar chart
+#of popularity of programming languages
+import matplotlib.pyplot as plt
+x=['Java','Python','PHP','JavaScript','C#','C++']
+popularity=[22.2,17.6,8.8,8,7.7,6.7]
+x_pos=[i for i,_ in enumerate(x)]
+'''The code creates:
+- `x`: List of programming languages.
+- `popularity`: List of their popularity percentages.
+- `x_pos`: List of positions `[0, 1, 2, 3, 4, 5]`, 
+   representing the index of each language in `x`.
+
+This helps in plotting their popularity in a graph, like a bar chart.
+'''
+
+plt.barh(x_pos,popularity,color='green')
+plt.xlabel('Languages')
+plt.ylabel('Popularity')
+plt.title("Popularity of Programming languages\n"+"worlwide , oct 2017 ")
+plt.yticks(x_pos,x)
+plt.show()
+#########################################################################
+
+
+
+
+
+
+
+
+
+
 
 
 
