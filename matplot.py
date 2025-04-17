@@ -279,6 +279,17 @@ plt.title('Gendre Count')
 plt.ylabel('Count')
 plt.show()
 
+#correlation heatmap
+import numpy as np
+import seaborn as sns
+
+corr=df[['Age','Ann_income','Score']].corr()
+plt.imshow(corr,cmap='coolwarm',interpolation='none')
+plt.colorbar()
+plt.xticks(range(len(corr)),corr.columns,rotation=45)
+plt.yticks(range(len(corr)),corr.columns)
+plt.title("Correlation  Heatmap")
+plt.show()
 
 
 
