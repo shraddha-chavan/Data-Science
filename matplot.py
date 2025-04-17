@@ -206,6 +206,14 @@ except ValueError:
     print("Invalid input. Please enter integers only.")
 
 
+#usecase:fdata
+import matplotlib.pyplot as plt
+import seaborn as sns
+import pandas as pd
+import numpy as np
+#load and rename columns
+df=pd.read_csv('C:/Users/Latitude 5410/Downloads/Mall_Customers.csv')
+df.columns=['cust_id','Genre','Age','Ann_income','Score']
 
 
 
