@@ -302,6 +302,28 @@ plt.show()
 
 
 
+################################################################################################
+#write a python program to draw a line with
+#suitable label in the x axis, y axis and a title
+import matplotlib.pyplot as plt
+x=range(1,50)
+y=[value*3 for value in x]
+print("Values of x:")
+print(*range(1,50 ))
+print("Values of y (thrice of x):")
+print(y)
+#plot lines and/or markers to the axes
+plt.plot(x,y)
+#set the x axis label of the current axis
+plt.xlabel('x - axis')
+#set the y axis label of the current axis
+plt.xlabel('y - axis')
+#set a title
+plt.title('Draw a line.')
+#Display the figure
+plt.show()
+##################################################################################
+
 
 
 
