@@ -325,6 +325,23 @@ plt.show()
 ##################################################################################
 
 
+#write a python program to draw a line using given axis
+# values with suitable label in the x axis , y axis and a title
+import matplotlib.pyplot as plt
+#x axis values
+x=[1,2,3]
+#y axis values
+y=[2,4,1]
+#plot lines and/or markers to the axes
+plt.plot(x,y)
+#set the x axis label of the current axis
+plt.xlabel('x - axis')
+#set the y axis label of the current axis
+plt.xlabel('y - axis')
+#set a title
+plt.title('Sample graph!.')
+#Display the figure
+plt.show()
 
 
 
