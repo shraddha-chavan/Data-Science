@@ -265,6 +265,21 @@ pd.plotting.scatter_matrix(df[['Age','Ann_income','Score']],figsize=(10,10))
 plt.suptitle('Pairwise Sctter Mtrix')
 plt.show()
 
+#Gender distribution
+gender_counts=df.Genre.value_counts()
+
+#pie chart
+gender_counts.plot(kind='pie',autopct='%1.1f%%',startangle=90)
+plt.title('Gendre Distribution')
+plt.show()
+
+#bar chart
+gender_counts.plot(kind='bar',color=['skyblue','salmon'])
+plt.title('Gendre Count')
+plt.ylabel('Count')
+plt.show()
+
+
 
 
 
