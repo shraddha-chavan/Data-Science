@@ -173,7 +173,37 @@ sns.boxplot(df2.Gender)
 sns.countplot(df2.Salary)
 sns.countplot(df2.Gender)
 
+def maximize_efficiency(N, efficiencies):
+    if N < 5:
+        return format(0, ".5f")
+    
+    components_to_keep = []
+    
+    # Divide efficiencies into groups of 5 and handle each group
+    for i in range(0, N, 5):
+        group = efficiencies[i:i+5]
+        group.sort()  # Sort to find the least efficient component
+        components_to_keep.extend(group[1:])  # Keep the top 4 components from the group
+    
+    # Calculate the average of the kept components
+    average_efficiency = sum(components_to_keep) / len(components_to_keep)
+    
+    return format(average_efficiency, ".5f")
 
+# User Input Section
+try:
+    N = int(input("Enter the number of components (N): "))
+    if N % 5 != 0:
+        print("Error: The number of components must be a multiple of 5.")
+    else:
+        efficiencies = list(map(int, input("Enter the efficiencies, separated by spaces: ").split()))
+        if len(efficiencies) != N:
+            print("Error: Number of efficiency values does not match the specified N.")
+        else:
+            result = maximize_efficiency(N, efficiencies)
+            print("The highest possible average efficiency is:", result)
+except ValueError:
+    print("Invalid input. Please enter integers only.")
 
 
 
