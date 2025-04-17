@@ -291,6 +291,15 @@ plt.yticks(range(len(corr)),corr.columns)
 plt.title("Correlation  Heatmap")
 plt.show()
 
+#boxplot
+plt.boxplot(df.Age)
+plt.title('Boxplot:Age')
+plt.show()
+
+plt.boxplot(df.Score)
+plt.title('Boxplot:Score')
+plt.show()
+
 
 
 
