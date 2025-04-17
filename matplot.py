@@ -216,6 +216,22 @@ df=pd.read_csv('C:/Users/Latitude 5410/Downloads/Mall_Customers.csv')
 df.columns=['cust_id','Genre','Age','Ann_income','Score']
 
 
+#basic histogram
+#age distribution
+plt.hist(df.Age,bins=10,alpha=0.7,edgecolor='red')
+#here alpha is for color transparency of graph color,
+#bins is the rows how many rows should there 
+#if 5 then in graph there is 5 rows
+plt.title('Age Distribution')
+plt.xlabel('Age')
+plt.ylabel('Frequency')
+plt.show()
+#annual income distribution
+plt.hist(df.Ann_income,bins=10,alpha=0.7,edgecolor='black')
+plt.title('Annual Income Distribution')
+plt.xlabel('Annual Income(k$)')
+plt.ylabel('Frequency')
+plt.show()
 
 
 
