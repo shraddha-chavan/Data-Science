@@ -234,6 +234,37 @@ plt.ylabel('Frequency')
 plt.show()
 
 
+#spending score distribution
+plt.hist(df.Score,bins=10,alpha=0.7,edgecolor='black')
+plt.title('Spending Score Distribution')
+plt.xlabel('Spending Score')
+plt.ylabel('Frequency')
+plt.show()
+#scatter plots(replacing jointplots)
+plt.scatter(df.Age,df.Score,alpha=0.6,color='red')
+plt.title('Age vs Score')
+plt.xlabel('Age')
+plt.ylabel('Score')
+plt.show()
+corr=df.corr(numeric_only=True)
+
+#scatter plot with regression line
+from numpy.polynomial.polynomial import polyfit
+x=df.Age
+y=df.Score
+b,m=polyfit(x,y,1)#1 is degree of polynomial
+plt.scatter(x,y,alpha=0.5)
+plt.plot(x,m*x+b,color='red')#here is line equation
+plt.title('Age vs Score with Trend Line')
+plt.xlabel('Age')
+plt.ylabel('Score')
+plt.show()
+#pairwise scatter matrix (subset of features)
+pd.plotting.scatter_matrix(df[['Age','Ann_income','Score']],figsize=(10,10))
+#here figsize is the dimensions means weight & height 
+plt.suptitle('Pairwise Sctter Mtrix')
+plt.show()
+
 
 
 
