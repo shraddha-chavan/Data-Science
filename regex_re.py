@@ -1,3 +1,9 @@
+#pip install regex
+import re
+#1..(dot)-matches any character except newline
+print(re.findall(r"a.c","abc aac acc adc a-c"))
+'''output:['abc', 'aac', 'acc', 'adc', 'a-c']'
+
 1. re.findall(pattern, string)
 Finds all non-overlapping matches of the pattern in the string.
 
@@ -22,4 +28,4 @@ Ends with 'c'
 
 Has any one character in between.
 
-
+'''
