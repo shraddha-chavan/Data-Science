@@ -67,4 +67,61 @@ the word "Python" appears at the end of a string,
 '''
 ###########################################################################
 
+#4.*(asterisk)-0 or more of the preceding character
+print(re.findall(r"ab*c","ac abc abbc abbbc"))
+'''output:['ac', 'abc', 'abbc', 'abbbc']'
+
+Pattern: ab*c
+(a → match the letter 'a'
+b* → match zero or more 'b' letters (can be no 'b', or many)
+c → match the letter 'c')
+
+So, ab*c matches:
+"ac"       (no b)
+"abc"      (one b)
+"abbc"     (two b's)
+"abbbc"    (three b's)
+
+  '''
+###########################################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
