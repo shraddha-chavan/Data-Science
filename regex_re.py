@@ -103,6 +103,61 @@ It matches:
 '''
 ##########################################################################
 
+#6.?(question)-0 or 1 preceding character
+print(re.findall(r"ab?c","ac abc abbc abbbc"))
+'''output:['ac', 'abc']
+
+
+Pattern: ab?c
+(a → match the letter 'a'
+b? → match zero or one 'b' (can have no 'b' or just one)
+c → match the letter 'c')
+
+It matches:
+"ac" ✅ (zero b)
+"abc" ✅ (one b)
+"abbc" ❌ (has two b's)
+"abbbc" ❌ (has three b's)
+
+
+'''
+
+########################################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
