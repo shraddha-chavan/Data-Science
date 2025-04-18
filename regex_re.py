@@ -29,3 +29,22 @@ Ends with 'c'
 Has any one character in between.
 
 '''
+
+
+################################################################################
+#2.^(caret)-matches start of string
+print(re.findall(r"^Hello","Hello World\nHelllo Python"))
+'''output:['Hello']
+
+The regex pattern ^Hello is used to match the word 
+"Hello" only if it appears at the very start of the string.
+ In the expression re.findall(r"^Hello", "Hello World\nHelllo Python"),
+ the caret ^ anchors the match to the beginning of the entire string,
+ not after the newline \n, unless the re.MULTILINE flag is used
+ (which it isn't here). So, even though the string has two lines, 
+  only the first "Hello" at the beginning of the string is matched, 
+  and the second one ("Helllo") is ignored because it doesn’t exactly
+  match "Hello" and it's not at the start. Hence, the output is ['Hello'].
+
+  '''
+#####################################################################################
