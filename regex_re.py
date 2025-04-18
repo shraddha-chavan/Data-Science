@@ -48,3 +48,23 @@ The regex pattern ^Hello is used to match the word
 
   '''
 #####################################################################################
+
+#3.$(dollar)-matches a=end of string
+print(re.findall(r"Python$","Hello Python"))
+'''output:['Python']
+
+The regex pattern r"Python$" is used to check if 
+the word "Python" appears at the end of a string,
+ with the $ symbol representing the end of the string. 
+ The function re.findall() searches for all 
+ matches of this pattern in the provided string and 
+ returns them as a list. For example, in the string 
+ "Hello Python", the word "Python" is indeed at the end, 
+ so the output is ['Python']. However, if the string was 
+ "Hello Python is awesome", the output would be an empty 
+ list ([]) because "Python" is not at the end. 
+ This is how the pattern works simply and effectively!
+'''
+###########################################################################
+
+
