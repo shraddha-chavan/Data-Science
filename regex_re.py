@@ -124,6 +124,23 @@ It matches:
 
 ########################################################################
 
+#7.{}(curly braces)-exact or range og repetitions
+print(re.findall(r"ab{2}c","ac abc abbc abbbc"))
+'''output:['abbc']
+
+Pattern: ab{2}c
+(a → match the letter 'a'
+b{2} → match exactly two bs (no more, no less)
+c → match the letter 'c')
+
+It matches:
+"ac" ❌ (no b's)
+"abc" ❌ (only one b)
+"abbc" ✅ (exactly two b's)
+"abbbc" ❌ (three b's)
+
+'''
+########################################################################
 
 
 
