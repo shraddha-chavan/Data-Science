@@ -85,6 +85,23 @@ So, ab*c matches:
   '''
 ###########################################################################
 
+#5.+(plus)- 1 or more of the preceding character
+print(re.findall(r"ab+c","ac abc abbc abbbc"))
+'''output:['abc', 'abbc', 'abbbc']
+
+Pattern: ab+c
+(a → match the letter 'a'
+b+ → match one or more 'b' (at least one 'b')
+c → match the letter 'c')
+
+It matches:
+"abc" ✅ (1 b)
+"abbc" ✅ (2 b’s)
+"abbbc" ✅ (3 b’s)
+"ac" ❌ (has no b, so doesn’t match)
+
+'''
+##########################################################################
 
 
 
