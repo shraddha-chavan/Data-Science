@@ -159,6 +159,28 @@ It matches:
 #######################################################################################
 
 
+#9.[^](negated set)-not in the set
+print(re.findall(r"a[^bc]d","aad aed acd abd"))
+'''output:['aad', 'aed']
+Pattern: a[^bc]d
+(a – the word must start with a
+[^bc] – the middle letter cannot be b or c
+d – the word must end with d)
+
+Text: "aad aed acd abd"
+aad – middle is a (not b or c) → ✅ match
+aed – middle is e (not b or c) → ✅ match
+acd – middle is c → ❌ no match
+abd – middle is b → ❌ no match
+
+
+
+Pattern: a[^bc]d
+a – the word must start with a
+'''
+####################################################################################
+
+
 
 
 
