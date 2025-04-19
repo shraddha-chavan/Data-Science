@@ -141,6 +141,22 @@ It matches:
 
 '''
 ########################################################################
+#8.[](square brackets)-either b or c character set
+print(re.findall(r"a[bc]d","abd acd aad aed"))
+'''output:['abd', 'acd']
+
+Pattern: a[bc]d
+(a → match the letter 'a'
+[bc] → match either 'b' or 'c' (this is a character set, so either one will work)
+d → match the letter 'd')
+
+It matches:
+"abd" ✅ (matches 'b' from the set [bc])
+"acd" ✅ (matches 'c' from the set [bc])
+"aad" ❌ (doesn’t match 'b' or 'c' in the middle)
+"aed" ❌ (doesn’t match 'b' or 'c' in the middle)
+'''
+#######################################################################################
 
 
 
