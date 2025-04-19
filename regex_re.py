@@ -173,12 +173,30 @@ aed – middle is e (not b or c) → ✅ match
 acd – middle is c → ❌ no match
 abd – middle is b → ❌ no match
 
-
-
-Pattern: a[^bc]d
-a – the word must start with a
 '''
+
 ####################################################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
