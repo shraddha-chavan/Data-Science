@@ -24,3 +24,4 @@ print("Data saved successfully!\n")
 with open("user_data.txt", "r") as file:
     print("Reading data from file:")
     print(file.read())
+#########################################################################################
