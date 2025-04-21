@@ -216,9 +216,23 @@ print(re.findall(r"\d+","123 abc 234"))
 '''output:['123', '234']
 these pattern gives alll the digits present in the pattern
 
+
+Regex: \d+
+\d – matches any digit (0-9)
++ – means one or more digits
+
+So, \d+ matches all sequences of digits in the text.
+
+Text: "123 abc 234"
+
+"123" → has digits 123 → ✅ Match
+"abc" → no digits → ❌ No match
+"234" → has digits 234 → ✅ Match
+
 '''
 
 ###############################################################################
+
 
 
 
