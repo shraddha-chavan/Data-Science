@@ -195,6 +195,22 @@ dog ✅
 
 ###################################################################################
 
+#11.()(parentheses)-grouping
+print(re.findall(r"(ab)+","abab ab ababab"))
+'''output:['ab', 'ab', 'ab']
+
+Pattern: (ab)+
+() → groups ab
++ → match one or more times
+
+Text: "abab ab ababab"
+'abab' → has 'ab' twice → ✅ group is 'ab'
+'ab' → one 'ab' → ✅ group is 'ab'
+'ababab' → three 'ab' → ✅ group is 'ab'
+
+
+'''
+##############################################################################
 
 
 
