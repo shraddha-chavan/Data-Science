@@ -298,6 +298,69 @@ Text: "a_b 123 @!"
 
 ########################################################################################
 
+#16.\s-whitespace
+print(re.findall(r"\s+","a b\tc\nd"))
+'''output:[' ', '\t', '\n']
+
+Regex: \s+
+\s – matches whitespace characters, which include:
+Space (' ')
+Tab ('\t')
+Newline ('\n')
+Other whitespace characters like carriage return ('\r'), etc.
++ – means one or more whitespace characters
+
+So, \s+ matches sequences of whitespace characters.
+
+Text: "a b\tc\nd"
+"a" → no whitespace → ❌ No match
+" " (space) → whitespace → ✅ Match
+"\t" (tab) → whitespace → ✅ Match
+"\n" (newline) → whitespace → ✅ Match
+"d" → no whitespace → ❌ No match
+
+
+
+'''
+################################################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
