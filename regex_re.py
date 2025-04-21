@@ -276,6 +276,53 @@ Text: "a_b 123 @!"
 "@!" → special characters, not alphanumeric or underscore → ❌ No match
 '''
 ######################################################################
+#15.\W-non-word character
+print(re.findall(r"\W+","a_b 123 @!"))
+'''OUTPUT:[' ', ' @!']
+
+Regex: \W+
+\W – matches non-word characters, which include:
+Anything that is not alphanumeric (letters, digits) or an underscore (_)
++ – means one or more of the non-word characters
+
+So, \W+ matches sequences of non-word characters.
+
+Text: "a_b 123 @!"
+
+"a_b" → is a word (alphanumeric + underscore) → ❌ No match
+"123" → digits (word characters) → ❌ No match
+" @!" → contains a space and special characters (@!) → ✅ Match
+
+
+'''
+
+########################################################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
