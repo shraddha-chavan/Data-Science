@@ -177,6 +177,23 @@ abd – middle is b → ❌ no match
 
 ####################################################################################
 
+#10.|(pipe)-logical OR
+print(re.findall(r"cat|dog","I have a cat and a dog"))
+''' output:['cat', 'dog']
+
+🔹 What it does:
+cat|dog means: find "cat" or "dog"
+
+The sentence is: "I have a cat and a dog"
+
+It finds:
+cat ✅
+dog ✅
+
+
+'''
+
+###################################################################################
 
 
 
