@@ -324,6 +324,57 @@ Text: "a b\tc\nd"
 '''
 ################################################################################
 
+#17.\S - non-whitespace
+print(re.findall(r"\S+","a b\tc\nd"))
+'''output:['a', 'b', 'c', 'd']
+
+Regex: \S+
+\S – matches non-whitespace characters, which include:
+Letters, digits, and special characters (anything except spaces, tabs, and newlines)
++ – means one or more of these non-whitespace characters
+So, \S+ matches sequences of non-whitespace characters.
+
+Text: "a b\tc\nd"
+
+"a" → non-whitespace → ✅ Match
+"b" → non-whitespace → ✅ Match
+"\t" (tab) → whitespace → ❌ No match
+"c" → non-whitespace → ✅ Match
+"\n" (newline) → whitespace → ❌ No match
+"d" → non-whitespace → ✅ Match
+
+'''
+###############################################################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
