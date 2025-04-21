@@ -234,6 +234,48 @@ Text: "123 abc 234"
 ###############################################################################
 
 
+#13.\D-non-digit
+print(re.findall(r"\D+","123 abc 234"))
+'''output:[' abc ']
+
+Regex: \D+
+\D – matches any non-digit (anything that is not 0-9)
++ – means one or more non-digit characters
+
+So, \D+ matches sequences of non-digit characters.
+
+Text: "123 abc 234"
+
+"123" → all digits → ❌ No match
+" abc " → has spaces and letters → ✅ Match
+"234" → all digits → ❌ No match
+
+
+
+
+'''
+##################################################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
