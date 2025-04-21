@@ -257,6 +257,27 @@ Text: "123 abc 234"
 ##################################################################################
 
 
+#14.\w-word character(alphanumeric + _)
+print(re.findall(r"\w+","a_b 123 @!"))
+'''output:['a_b', '123']
+
+Regex: \w+
+\w – matches word characters, which include:
+Alphanumeric characters (letters and numbers)
+Underscore (_)
++ – means one or more of the above characters
+
+So, \w+ matches sequences of alphanumeric characters or underscores.
+
+Text: "a_b 123 @!"
+
+"a_b" → has letters and an underscore → ✅ Match
+"123" → has digits → ✅ Match
+"@!" → special characters, not alphanumeric or underscore → ❌ No match
+'''
+######################################################################
+
+
 
 
 
