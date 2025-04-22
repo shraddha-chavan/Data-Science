@@ -379,6 +379,29 @@ re.sub(r"\d{3}-\d{3}-\d{4}","***-***-****",text)
 '''
 #################################################################################################
 
+#19.re.split()-split by pattern
+print(re.split(r"[,;]","apple,banana;grape,orange"))
+'''output:['apple', 'banana', 'grape', 'orange']
+
+
+re.split():
+Function: re.split(pattern, string)
+It splits the string wherever the pattern matches and returns a list of substrings.
+
+Regex: [,;]
+[,] – matches a comma ,
+[;] – matches a semicolon ;
+
+So, [,;] matches either a comma or a semicolon.
+
+Text: "apple,banana;grape,orange"
+The function will split the string wherever it finds a comma or semicolon.
+
+It splits the string into the following parts:
+"apple", "banana", "grape", "orange"
+
+
+'''
 
 
 
