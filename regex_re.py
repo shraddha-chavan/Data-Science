@@ -346,49 +346,32 @@ Text: "a b\tc\nd"
 '''
 ###############################################################################################
 
-#8.[](square brackets)-either b or c character set
-print(re.findall(r"a[bc]d","abd acd aad aed"))
-'''output:['abd', 'acd']
+#18.re.sub()-substitude using regex
+text="My number is 123-456-7890"
+print(re.sub(r"\d{3}-\d{3}-\d{4}","***-***-****",text))
+'''output:My number is ***-***-****
 
-Pattern: a[bc]d
-(a → match the letter 'a'
-[bc] → match either 'b' or 'c' (this is a character set, so either one will work)
-d → match the letter 'd')
+re.sub():
+Function: re.sub(pattern, replacement, string)
+It replaces occurrences of the pattern in the string with the specified replacement.
 
-It matches:
-"abd" ✅ (matches 'b' from the set [bc])
-"acd" ✅ (matches 'c' from the set [bc])
-"aad" ❌ (doesn’t match 'b' or 'c' in the middle)
-"aed" ❌ (doesn’t match 'b' or 'c' in the middle)
+Regex: \d{3}-\d{3}-\d{4}
+\d{3} – matches exactly three digits
+
+- – matches the hyphen -
+
+\d{4} – matches exactly four digits
+
+So, \d{3}-\d{3}-\d{4} matches a phone number in the format: xxx-xxx-xxxx.
+
+Text: "My number is 123-456-7890"
+
+Find the phone number 123-456-7890
+Replace it with ***-***-****
+
+
 '''
-#######################################################################################
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+##############################################################################################
 
 
 
