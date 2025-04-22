@@ -402,6 +402,44 @@ It splits the string into the following parts:
 
 
 '''
+#########################################################################################################
+
+#20.\b matches:
+#before the first letter/no. of a word
+text="Hello world! Welcome to regex."
+matches=re.findall(r"\b\w+\b",text)
+print(matches)    
+'''output:['Hello', 'world', 'Welcome', 'to', 'regex']
+
+Regex: \b\w+\b
+\b – word boundary. It matches the position before the first letter or number of a word.
+\w+ – matches one or more word characters (letters, digits, or underscore).
+The second \b – matches the position after the last letter or number of a word.
+
+So, this pattern matches whole words in the text.
+
+Text: "Hello world! Welcome to regex."
+
+"Hello" → ✅ Match
+"world" → ✅ Match
+"Welcome" → ✅ Match
+"to" → ✅ Match
+"regex" → ✅ Match
+
+'''
+#####################################################################
+#example:
+text="Hello world Welcome to regex."
+matches=re.findall(r"\bworld\b",text)
+print(matches)    
+    
+'''output:['world']'''
+
+######################################################################
+
+
+
+
 
 
 
