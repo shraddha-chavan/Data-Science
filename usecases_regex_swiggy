@@ -25,3 +25,6 @@ $ → End of string
     r"^[\w\.-]+@[\w\.-]+\.\w+$"
 ✅ Valid: abc@gmail.com
 ❌ Invalid: abc@.com, @gmail.com
+
+
+
