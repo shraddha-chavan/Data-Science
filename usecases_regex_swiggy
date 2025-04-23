@@ -1,1 +1,11 @@
+#######################################################################################################
+import re
+#1.extract order IDs from log string
+logs="""
+[INFO]Order ID:SWY123456 placed at 6:45PM
+[INFO]Order ID:SWY987654 placed at 7:10PM
+"""
+order_ids=re.findall(r"SWY\d{6}",logs)
+print("Extracted Order IDs:",order_ids)
+'''output:Extracted Order IDs: ['SWY123456', 'SWY987654']'''
 
