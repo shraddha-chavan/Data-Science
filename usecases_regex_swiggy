@@ -70,5 +70,26 @@ Part 2: -\s(\d+)
 
 
 '''
+#4.Identify Discount Codes in notification messages
+notifications="""
+Use code SWIGGY50 to get 50% off.
+Hurry! Apply code FIRST100 for 100 off.
+"""
+
+discount_codes=re.findall(r"\b[A-Z]+\d*\b",notifications)
+
+'''
+🔍 Pattern: \b[A-Z]+\d*\b
+What it means:
+\b → word boundary (to match whole words)
+[A-Z]+ → one or more capital letters (like SWIGGY, FIRST)
+\d* → zero or more digits (like 50, 100 — optional)
+\b → end of word boundary
+
+✅ It matches:
+Words that are all capital letters,
+ and may have numbers at the end
+'''
+
 
 
