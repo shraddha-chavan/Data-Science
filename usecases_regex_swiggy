@@ -93,4 +93,27 @@ Words that are all capital letters,
 '''
 #############################################################################
 
+##################################################################################
+#5.Clean customer reveiws(remove emojis and unwanted character)
+reviews=[
+    "Food was awesome #happy",
+    "Worst experince ever🔍!!",
+    ]
+cleaned_reviews=[re.sub(r"[^\w\s.,!?]","",review)for review in reviews]
+print("Cleaned Reviews:",cleaned_reviews)
+
+
+'''
+🔍 Regex Pattern: [^\w\s.,!?]
+What it means:
+\w → matches letters, numbers, and underscores
+\s → matches spaces
+.,!? → allows common punctuation
+^ → means NOT these characters
+
+
+'''
+################################################################################
+
+
 
