@@ -26,5 +26,49 @@ $ → End of string
 ✅ Valid: abc@gmail.com
 ❌ Invalid: abc@.com, @gmail.com
 
+✅ Phone Pattern:
+r"^\d{10}$"  or r"^[6-9]\d{9}$"  #[6-9]=first digit must be 6,7,8,9
+Must be exactly 10 digits       #\d{9}=followed by exactly 9 digits
+✅ Valid: 9876543210
+❌ Invalid: 12345, abcd123456
+
+
+'''
+for customer in customer_data:
+    valid_email=re.match(email_pattern,customer["email"])
+    valid_phone=re.match(phone_pattern,customer["phone"])
+    print(f"Validating{customer['email']}|Email:{bool(valid_email)}|Phone{bool(valid_phone)}")
+
+
+
+
+#############################################################################
+
+#3.Parse menu items and prices
+menu="""
+1.Paneer Butter Masala-250
+2.Chicken Biryani-300
+3.Veg Thali-180
+"""
+items=re.findall(r"(\d+\.\s[\w\s]+)-\s(\d+)",menu)
+items
+
+'''
+Part 1: (\d+\.\s[\w\s]+)
+\d+ → one or more digits (like 1, 2, 3)
+\. → a dot . after the number
+\s → a space
+[\w\s]+ → the item name (letters and spaces)
+
+✅ Matches things like:
+1. Paneer Butter Masala, 2. Chicken Biryani, 3.Veg Thali
+
+Part 2: -\s(\d+)
+- → dash
+\s → space
+\d+ → one or more digits (the price like 250, 300)
+
+
+'''
 
 
