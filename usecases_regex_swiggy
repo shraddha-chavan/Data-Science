@@ -9,3 +9,19 @@ order_ids=re.findall(r"SWY\d{6}",logs)
 print("Extracted Order IDs:",order_ids)
 '''output:Extracted Order IDs: ['SWY123456', 'SWY987654']'''
 
+#2.validate email and phone no.
+customer_data=[{"email":"shraddhac695@gmail.com","phone":"8999156064"},
+               {"email":"fake-email@.com","phone":"12345"},]
+email_pattern=r"^[\w\.-]+@[\w\.-]+\.\w+$"
+phone_pattern=r"^[6-9]\d{9}$"
+'''
+^[\w\.-]+ → Start with letters, digits, _, ., or -
+@ → Must have @
+[\w\.-]+ → Domain name (like gmail, yahoo)
+\. → Dot before extension
+\w+ → Extension like com, in, etc.
+$ → End of string
+✅email pattern:
+    r"^[\w\.-]+@[\w\.-]+\.\w+$"
+✅ Valid: abc@gmail.com
+❌ Invalid: abc@.com, @gmail.com
