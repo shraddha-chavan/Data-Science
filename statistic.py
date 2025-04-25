@@ -130,3 +130,22 @@ scorers can be given challenging tasks to keep them
  students to reach a more balanced performance level.
 
 '''
+########################################################################
+import numpy as np
+#original weights
+original_weights=[105,156,145,172,100]
+#add 5 pounds for winter clothing
+adjusted_weights=[weight+5 for weight in original_weights]
+#calculate  mean nd SD
+mean_original=np.mean(original_weights)
+std_original=np.std(original_weights,ddof=1)
+mean_adjusted=np.mean(adjusted_weights)
+std_adjusted=np.std(adjusted_weights,ddof=1)
+'''
+ddof=1 in np.std()
+
+
+
+'''
+
+
