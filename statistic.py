@@ -148,4 +148,29 @@ ddof=1 in np.std()
 
 '''
 
+###################################################################################################
+import numpy as np
+#original data
+weights=[105,156,145,172,100]
+#water formula:(weight*2.5)+750
+water_intake=[(w*2.5)+750 for w in weights]
+#calculate original states
+mean_weight=np.mean(weights)
+std_weight=np.std(weights,ddof=1)
+#calculate new states
+mean_water=mean_weight*2.5+7.5
+std_water=std_weight*2.5
+print(f"original mean weight:{mean_weight:.2f},originalstd Dev:{std_weight:.2f}")
+print(f'mean water intake:{mean_water:.2f} ml')
+print(f'std Dev of water intake:{std_water:.2f}ml')
+
+#######################################################################################################
+import numpy as np
+import pylab
+import scipy.stats as stats
+
+measurements=np.random.normal(loc=20,scale=5,size=100)
+stats.probplot(measurements,dist='norm',plot=pylab)
+pylab.show()
+#######################################################################################################
 
