@@ -88,3 +88,45 @@ varied widely — possibly indicating that some
 
 '''
 ##################################################################################
+#usecase
+import math
+#sample dataset1
+scores_1 = [75,72,68,67,73]
+#sample dataset2
+scores_2 = [83,70,70,63,70,70]
+
+def calculate_standard_deviation(scores):
+    mean=sum(scores)/len(scores)
+    squared_diffs=[(x-mean)**2 for x in scores]
+    variance=sum(squared_diffs)/len(scores)
+    std_dev=math.sqrt(variance)
+    return std_dev
+
+#calculate SD
+std_dev_1=calculate_standard_deviation(scores_1)
+std_dev_2=calculate_standard_deviation(scores_2)
+
+print("SD(Population):")
+print(f"Dataset 1:{std_dev_1:2f}")
+print(f"Dataset 2:{std_dev_2:2f}")
+
+'''
+📌 Takeaway:
+Dataset 1 scores are closer to the average, 
+meaning students performed more consistently.
+ Dataset 2 scores vary more, even though many
+ students scored 70, a few scored much higher or lower, 
+ which pulled the SD up. This means some students 
+ in Dataset 2 are either struggling or doing much 
+ better than the rest.
+
+🎯 Strategic Decision:
+For Dataset 2, the teacher should look closely at 
+students scoring much higher or lower than the rest. 
+The ones scoring low may need extra help, while high 
+scorers can be given challenging tasks to keep them
+ engaged. The teacher should aim to reduce this gap by 
+ offering support where needed and encouraging all 
+ students to reach a more balanced performance level.
+
+'''
