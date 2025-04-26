@@ -57,3 +57,28 @@ plt.show()
 #of groceries compare to others and also focus that why other products are
 #not sales yet.
 #########################################################################################################
+#4. Line Chart of Monthly Average Temperature
+
+months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 
+          'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+temperatures = [4, 16, 9, 14, 18, 22, 25, 24, 20, 15, 19, 15]
+
+plt.plot(months, temperatures, linestyle='--', marker='o', color='blue')
+plt.title("Monthly Average Temperature")
+plt.xlabel("Month")
+plt.ylabel("Temperature (°C)")
+plt.grid(True)
+plt.show()
+#takeaway:here we can say the monthly average temperature of june,july,august
+#september is stable or we can say it is average.
+######################################################################################################
+
+#5. Scatter Plot 
+tips =sns.load_dataset("tips")
+sns.scatterplot(data=tips, x="total_bill", y="tip", hue="sex", size="size", sizes=(20, 20))
+plt.title("Total Bill vs Tip")
+plt.xlabel("Total Bill ($)")
+plt.ylabel("Tip ($)")
+plt.show()
+plt.show()
+sns.scatterplot(data=tips,x="total_bills",)
