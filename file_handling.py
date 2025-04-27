@@ -25,3 +25,23 @@ with open("user_data.txt", "r") as file:
     print("Reading data from file:")
     print(file.read())
 #########################################################################################
+#usecase:student registration
+# Function to register a new student (write to file)
+def register_student(name):
+    with open("students.txt", "a") as file:
+        file.write(name + "\n")
+    print(f"Student '{name}' registered successfully!")
+
+# Function to show all registered students (read from file)
+def show_all_students():
+    print("Registered Students:")
+    with open("students.txt", "r") as file:
+        for line in file:
+            print(line.strip())
+
+# Example usage
+register_student("Alice")
+register_student("Bob")
+register_student("Charlie")
+
+show_all_students()
