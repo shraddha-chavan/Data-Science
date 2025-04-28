@@ -4,6 +4,7 @@ Created on Mon Mar 10 08:53:21 2025
 
 @author: Latitude 5410
 """
+###################################################################################################################
 #Alexa wants to buy exactly N bananas from two vendors sells bananas in fixed-sized
 #bunches . Alexa can only purchases full bunches and not individual bananas.
 #He needs your help to determine the min cost req. to buy exactly N bananas.
@@ -31,7 +32,7 @@ def min_cost(no_banana,lot1,price1,lor2,price2):
     return min(cost_a,cost_b)
 min_cost(no_banana,lot1,price1,lot2,price2)
     
-
+####################################################################################################################
 
     
               
