@@ -10,7 +10,7 @@ row_label=["a","b"]
 df=pd.DataFrame(technologies,columns=column_names,index=row_label)
 print(df)
 
-#################################
+##################################################################################
 df.dtypes#In pandas,  is an attribute used to find out the 
 #data type of each column in a DataFrame or Series. 
 #It is especially useful for checking the type of data 
@@ -490,7 +490,7 @@ for exp in df['Experience']:
 df['Seniority'] = seniority
 print(df)
 
-
+###################################################################################################
 
 
 
