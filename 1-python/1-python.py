@@ -50,7 +50,7 @@ print(type(c1))
 print(type(c2))
 print(c1.real)
 print(c1.imag)
-
+#######################################################################
 #Boolean
 all_ok=True
 print(all_ok)
