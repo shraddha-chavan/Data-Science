@@ -61,7 +61,7 @@ print(type(all_ok))
 status=bool(input('ok it is confirmed'))
 print(status)
 print(type(status))
-
+################################################################
 #arithmetic operation
 home=10
 away=15
