@@ -370,7 +370,33 @@ print("less",a<b)
 print("less or equal:",a<=b)
 
 ########################################################################################################
+import numpy as np
 
+# Input array
+arr = np.array([8, 3, 15, 1, 6, 10, 5, 2])
+
+# Step 1: Count 1s in binary
+ones = np.array([bin(x).count('1') for x in arr])
+print("Binary 1s:", ones)
+
+# Step 2: Create balance array (+ for even indices, - for odd)
+balance = np.array([ones[i] if i % 2 == 0 else -ones[i] for i in range(len(ones))])
+print("Balance:", balance)
+
+# Step 3: Find longest subarray with sum 0
+prefix_sum = 0
+first_occurrence = {0: -1}
+max_len = 0
+
+for i in range(len(balance)):
+    prefix_sum += balance[i]
+    if prefix_sum in first_occurrence:
+        max_len = max(max_len, i - first_occurrence[prefix_sum])
+    else:
+        first_occurrence[prefix_sum] = i
+
+print("Longest balanced subarray length:", max_len)
+########################################################################################################
 
 
 
